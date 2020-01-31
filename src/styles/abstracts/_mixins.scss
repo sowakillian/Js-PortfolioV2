@@ -1,0 +1,48 @@
+
+@mixin mq-to-1920 {
+  @media (max-width: #{$screen1920}) {
+    @content;
+  }
+}
+
+@mixin mq-to-1280 {
+  @media (max-width: #{$screen1280}) {
+    @content;
+  }
+}
+
+@mixin mq-to-1024 {
+  @media (max-width: #{$screen1024}) {
+    @content;
+  }
+}
+
+@mixin mq-to-980 {
+  @media (max-width: #{$screen980}) {
+    @content;
+  }
+}
+
+@mixin mq-to-768 {
+  @media (max-width: #{$screen768}) {
+    @content;
+  }
+}
+
+@mixin mq-to-700 {
+  @media (max-width: #{$screen700}) {
+    @content;
+  }
+}
+
+@mixin mq-to-576 {
+  @media (max-width: #{$screen576}) {
+    @content;
+  }
+}
+
+@mixin mq-to-480 {
+  @media (max-width: #{$screen480}) {
+    @content;
+  }
+}
