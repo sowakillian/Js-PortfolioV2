@@ -45,3 +45,18 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+a {
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: white;
+  }
+  &:active {
+    color:white;
+  }
+
+  &:visited {
+    color: white;
+  }
+}

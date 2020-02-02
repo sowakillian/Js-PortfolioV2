@@ -1,3 +1,8 @@
 import '../styles/main.scss';
 
-console.log('webpack starterkit');
+import HeaderMenu from "./components/global/nav/toggleMenu";
+
+const headermenu = ((headermenu) => {
+    headermenu.toggleMenu();
+})(HeaderMenu);
+
