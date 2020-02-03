@@ -3,4 +3,13 @@ body {
   color: white;
   font-family: 'IntegralCF', sans-serif;
   font-size: 100px;
+  cursor: none;
+
+  &:hover {
+    cursor: none;
+  }
+
+  a {
+    cursor: none;
+  }
 }

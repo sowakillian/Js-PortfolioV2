@@ -4,12 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Killian Sowa - Interactive developer</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
 </head>
 <body>
+
+  <div class="cursor cursor--small"></div>
+  <canvas class="cursor cursor--canvas" resize></canvas>
+
   <div class="hb-menu">
     <nav role="navigation">
       <div class="hb-menu-button">
-        <input type="checkbox" />
+        <input class="hb-menu-button-checkbox" type="checkbox" />
         <span></span>
         <span></span>
         <span></span>
@@ -17,12 +23,13 @@
     </nav>
 
     <ul id="menu" class="hb-menu-links">
-      <a href="#"><li>WORKS</li></a>
-      <a href="#"><li>ABOUT</li></a>
-      <a href="#"><li>CONTACT</li></a>
+      <li><a href="/works" class="link">WORKS</a></li>
+      <li><a href="#" class="link">ABOUT</a></li>
+      <li><a href="#" class="link">CONTACT</a></li>
     </ul>
   </div>
-  <div class="home-landing">
+  <section class="home-landing">
+    <span class="home-landing-scroll-incitator"></span>
     <span class="home-landing-contour"></span>
     <div class="home-landing-socials">
       <a href="#"><img src="../public/images/mail.svg"></a>
@@ -33,7 +40,46 @@
       <h1>KILLIAN SOWA</h1>
       <h2>INTERACTIVE DEVELOPER</h2>
     </div>
-  </div>
-  <h1>webpack starter</h1>
+  </section>
+  <section class="project-list">
+    <div class="project-list-wrapper">
+      <span class="project-list-wrapper-stroke"></span>
+      <ul>
+        <li>
+          <a href="#" class="project-list-item">
+            <p>DROPCLOTHES</p>
+            <span class="project-list-item-photo">
+               <img src="../public/images/imgproject_drop.jpg">
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="project-list-item">
+            <p>SACHA SMOOTHIE</p>
+          <span class="project-list-item-photo">
+            <img src="../public/images/imgproject_sachasmoothies.jpg">
+          </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="project-list-item">
+            <p>FRAMMI AWARDS</p>
+          <span class="project-list-item-photo">
+            <img src="../public/images/imgproject_frammi.jpg">
+          </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="project-list-item">
+            <p>MOBITWEETS</p>
+          <span class="project-list-item-photo">
+            <img src="../public/images/imgproject_twitter.jpeg">
+          </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </section>
 </body>
 </html>

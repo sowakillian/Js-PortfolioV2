@@ -3,33 +3,35 @@
   &-links {
     height: 100vh;
     width: 100%;
-    right: -100%;
-    position: absolute;
-    z-index: 2;
+    transform: translate(0, -100%);
+    position: fixed;
+    z-index: 4;
     background: radial-gradient(#160089, #0A0138);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: all 0.4s ease;
     color: white;
     font-size: 80px;
     letter-spacing: 10px;
+    transition: all 0.4S ease;
 
-    a {
+    li {
       margin-bottom: 50px;
-      color: rgba(0,0,0,0);
-      -webkit-text-stroke-width: 2px;
-      -webkit-text-stroke-color: white;
-      transition: all 0.2s ease;
+      opacity: 0;
+    }
 
-      &:hover, &:focus {
-        color: white;
-      }
-
-      &:last-of-type {
-        margin-bottom: 0;
-      }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    .link {
+        color: rgba(0,0,0,0);
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+        transition: all 0.6s ease;
+        &:hover, &:focus {
+          color: white;
+        }
     }
 
     &-visible {
@@ -38,10 +40,10 @@
   }
   .hb-menu-button {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 50px;
     right: 5%;
-    z-index: 3;
+    z-index: 5;
     -webkit-user-select: none;
     user-select: none;
 
@@ -57,26 +59,23 @@
 
     input {
       display: block;
-      width: 40px;
+      width: 50px;
       height: 32px;
       position: absolute;
-      top: -7px;
-      left: -5px;
-      cursor: pointer;
       opacity: 0; /* hide this */
       z-index: 2; /* and place it over the hamburger */
       -webkit-touch-callout: none;
+      cursor: none;
     }
 
     span {
       display: block;
-      width: 33px;
+      width: 50px;
       height: 4px;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       position: relative;
 
       background: white;
-      border-radius: 3px;
 
       z-index: 1;
 
@@ -86,6 +85,10 @@
       background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
       opacity 0.55s ease;
 
+      &:nth-of-type(2) {
+        width: 40px;
+      }
+
     }
   }
 
@@ -94,7 +97,7 @@
     transform-origin: 0% 0%;
   }
 
-  .hb-menu-button span:nth-last-child(2)
+  .hb-menu-button span:nth-last-child(1)
   {
     transform-origin: 0% 100%;
   }
@@ -103,13 +106,12 @@
   {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: #232323;
   }
 
   /*
    * But let's hide the middle one.
    */
-  .hb-menu-button input:checked ~ span:nth-last-child(3)
+  .hb-menu-button input:checked ~ span:nth-of-type(2)
   {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
@@ -118,7 +120,7 @@
   /*
    * Ohyeah and the last one should go the other direction
    */
-  .hb-menu-button input:checked ~ span:nth-last-child(2)
+  .hb-menu-button input:checked ~ span:nth-of-type(3)
   {
     transform: rotate(-45deg) translate(0, -1px);
   }

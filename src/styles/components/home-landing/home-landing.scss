@@ -57,4 +57,14 @@
       -webkit-text-stroke-color: $mainpink;
     }
   }
+
+  &-scroll-incitator {
+    height: 180px;
+    width: 2px;
+    position: absolute;
+    left: 50%;
+    bottom: -90px;
+    transform: translate(-50%, 0px);
+    background-color: white;
+  }
 }

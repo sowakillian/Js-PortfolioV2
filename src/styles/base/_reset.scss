@@ -21,6 +21,9 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  &:hover {
+    cursor: none;
+  }
 }
 // HTML5 display-role reset for older browsers
 article, aside, details, figcaption, figure,
@@ -46,11 +49,17 @@ table {
   border-spacing: 0;
 }
 
+input {
+  &:hover {
+    cursor: none;
+  }
+}
 a {
   color: white;
   text-decoration: none;
   &:hover {
     color: white;
+    cursor: none;
   }
   &:active {
     color:white;
